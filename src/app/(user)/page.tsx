@@ -151,7 +151,7 @@ export default function Home() {
       </section>
 
       <section className="flex flex-col w-full gap-10 mt-10 text-tertiary p-4">
-        <TitleComponent title="Our Work" isCentered />
+        <TitleComponent title="Latest News & Event" isCentered />
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
           <CardNewsComponent

@@ -10,7 +10,11 @@ export default function TitleComponent({ isCentered = false, title }: Props) {
         isCentered ? "items-center justify-center" : "items-start justify-start"
       }`}
     >
-      <p className="text-black text-4xl font-bold">
+      <p
+        className={`text-black text-4xl font-bold text-wrap ${
+          isCentered ? "text-center" : "text-start"
+        }`}
+      >
         {title.split("\n")?.map((line, index) => (
           <span key={index}>
             {line}
