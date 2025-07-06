@@ -179,6 +179,12 @@ export default function Home() {
             createdBy="Admin"
           />
         </div>
+
+        <ButtonComponent
+          href="/news"
+          text="More News & Event"
+          className="mx-auto"
+        />
       </section>
     </main>
   );

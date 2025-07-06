@@ -8,17 +8,20 @@ type Props = {
   text: string;
 };
 
+const defaultClassName =
+  "bg-secondary text-white px-4 py-2 rounded hover:bg-secondary/80 w-fit";
+
 export default function ButtonComponent({
   href,
   onClick,
-  className = "bg-secondary text-white px-4 py-2 rounded hover:bg-secondary/80 w-fit",
+  className = defaultClassName,
   text,
 }: Props) {
   return (
     <Link
       href={href}
       onClick={() => onClick && onClick()}
-      className={className}
+      className={className ? `${defaultClassName} ${className}` : className}
     >
       {text}
     </Link>
