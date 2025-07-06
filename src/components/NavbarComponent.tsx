@@ -1,25 +1,22 @@
 "use client";
-import { useIsOpenBurger, useMenuActions } from "@/stores/menuStore";
+import {
+  useActiveMenu,
+  useIsOpenBurger,
+  useMenuActions,
+} from "@/stores/menuStore";
 import Link from "next/link";
 import ButtonComponent from "./ButtonComponent";
 
 export default function NavbarComponent() {
   const isOpenBurger = useIsOpenBurger();
-  const { setActiveMenu, toggleBurger } = useMenuActions();
-
-  const handleToggleMenu = (menu: string) => {
-    if (menu?.length) {
-      setActiveMenu(menu);
-    }
-
-    toggleBurger();
-  };
+  const activeMenu = useActiveMenu();
+  const { handleClickMenu } = useMenuActions();
 
   return (
-    <nav className="flex sticky top-0 items-center justify-between p-4 bg-primary z-50">
+    <nav className="flex sticky top-0 items-center justify-between py-4 px-4 sm:px-7 lg:px-10 bg-primary z-50">
       <Link
         href="/"
-        onClick={() => handleToggleMenu("home")}
+        onClick={() => handleClickMenu("home")}
         className="text-lg font-bold dark:text-white text-black"
       >
         MNK
@@ -29,8 +26,10 @@ export default function NavbarComponent() {
         <li>
           <Link
             href="/"
-            onClick={() => handleToggleMenu("home")}
-            className="hover:text-secondary"
+            onClick={() => handleClickMenu("home")}
+            className={`${
+              activeMenu === "home" && "text-secondary"
+            } hover:text-secondary`}
           >
             Home
           </Link>
@@ -38,8 +37,10 @@ export default function NavbarComponent() {
         <li>
           <Link
             href="/product-service"
-            onClick={() => handleToggleMenu("product-service")}
-            className="hover:text-secondary"
+            onClick={() => handleClickMenu("product-service")}
+            className={`${
+              activeMenu === "product-service" && "text-secondary"
+            } hover:text-secondary`}
           >
             Product & Service
           </Link>
@@ -47,8 +48,10 @@ export default function NavbarComponent() {
         <li>
           <Link
             href="/supply-chain"
-            onClick={() => handleToggleMenu("supply-chain")}
-            className="hover:text-secondary"
+            onClick={() => handleClickMenu("supply-chain")}
+            className={`${
+              activeMenu === "supply-chain" && "text-secondary"
+            } hover:text-secondary`}
           >
             Supply Chain
           </Link>
@@ -56,8 +59,10 @@ export default function NavbarComponent() {
         <li>
           <Link
             href="/csr"
-            onClick={() => handleToggleMenu("csr")}
-            className="hover:text-secondary"
+            onClick={() => handleClickMenu("csr")}
+            className={`${
+              activeMenu === "csr" && "text-secondary"
+            } hover:text-secondary`}
           >
             CSR
           </Link>
@@ -65,8 +70,10 @@ export default function NavbarComponent() {
         <li>
           <Link
             href="/news"
-            onClick={() => handleToggleMenu("news")}
-            className="hover:text-secondary"
+            onClick={() => handleClickMenu("news")}
+            className={`${
+              activeMenu === "news" && "text-secondary"
+            } hover:text-secondary`}
           >
             News
           </Link>
@@ -74,8 +81,10 @@ export default function NavbarComponent() {
         <li>
           <Link
             href="/career"
-            onClick={() => handleToggleMenu("career")}
-            className="hover:text-secondary"
+            onClick={() => handleClickMenu("career")}
+            className={`${
+              activeMenu === "career" && "text-secondary"
+            } hover:text-secondary`}
           >
             Career
           </Link>
@@ -85,7 +94,7 @@ export default function NavbarComponent() {
       <div className="hidden lg:flex items-center space-x-4">
         <ButtonComponent
           href="/contact-us"
-          onClick={() => handleToggleMenu("contact-us")}
+          onClick={() => handleClickMenu("contact-us")}
           text="Contact Us"
         />
       </div>
@@ -94,7 +103,7 @@ export default function NavbarComponent() {
         <button
           type="button"
           className="dark:text-white text-black focus:outline-none cursor-pointer"
-          onClick={() => handleToggleMenu("")}
+          onClick={() => handleClickMenu("")}
           aria-expanded={isOpenBurger}
           aria-controls="navbar-menu"
           aria-label="Toggle navigation"

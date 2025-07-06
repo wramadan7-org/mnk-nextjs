@@ -1,14 +1,16 @@
+import { MenuType } from "@/types/menuType";
 import { create } from "zustand";
 
 type State = {
   isOpenBurger: boolean;
-  activeMenu: string;
+  activeMenu: MenuType;
 };
 
 type Actions = {
   actions: {
     toggleBurger: () => void;
-    setActiveMenu: (menu: string) => void;
+    setActiveMenu: (menu: MenuType) => void;
+    handleClickMenu: (menu?: MenuType) => void;
   };
 };
 
@@ -17,7 +19,15 @@ const useMenuStore = create<State & Actions>((set) => ({
   activeMenu: "",
   actions: {
     toggleBurger: () => set((state) => ({ isOpenBurger: !state.isOpenBurger })),
-    setActiveMenu: (menu: string) => set({ activeMenu: menu }),
+    setActiveMenu: (menu: MenuType) => set({ activeMenu: menu }),
+    handleClickMenu: (menu?: MenuType) =>
+      set((state) => {
+        if (!menu) {
+          return { isOpenBurger: !state.isOpenBurger };
+        } else {
+          return { isOpenBurger: !state.isOpenBurger, activeMenu: menu };
+        }
+      }),
   },
 }));
 

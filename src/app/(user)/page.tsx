@@ -25,7 +25,7 @@ export default function Home() {
 
       <section
         id="about us"
-        className="p-4 flex flex-col-reverse lg:flex-row flex-wrap w-full gap-10 mt-10"
+        className="py-7 px-4 sm:px-7 lg:px-10 flex flex-col-reverse lg:flex-row flex-wrap w-full gap-10 mt-10"
       >
         <div className="flex flex-col flex-[1_1_0%] gap-3">
           <span className="text-sm text-tertiary font-semibold">About Us</span>
@@ -81,7 +81,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="flex flex-[1_1_0%] lg:flex-1/2 flex-col gap-3 px-4 lg:px-0 items-start justify-start lg:items-start lg:justify-center">
+        <div className="flex flex-[1_1_0%] lg:flex-1/2 flex-col gap-3 px-4 sm:px-7 lg:px-0 items-start justify-start lg:items-start lg:justify-center">
           <TitleComponent title="MNK Is A Leading And Established Mining Services Firm" />
 
           <ul className="list-none space-y-2">
@@ -133,7 +133,7 @@ export default function Home() {
 
       <section
         id="products"
-        className="flex flex-col w-full gap-10 mt-10 text-tertiary p-4"
+        className="flex flex-col w-full gap-10 mt-10 text-tertiary py-7 px-4 sm:px-7 lg:px-10"
       >
         <div className="flex flex-col gap-10">
           <div className="flex flex-col gap-2">
@@ -166,7 +166,7 @@ export default function Home() {
 
       <section
         id="news & event"
-        className="flex flex-col w-full gap-10 mt-10 text-tertiary p-4"
+        className="flex flex-col w-full gap-10 mt-10 text-tertiary py-7 px-4 sm:px-7 lg:px-10"
       >
         <TitleComponent title="Latest News & Event" isCentered />
 
@@ -206,7 +206,7 @@ export default function Home() {
 
       <section
         id="free consultation"
-        className="flex flex-col w-full h-full gap-10 mt-10 text-white bg-primary px-4 py-7"
+        className="flex flex-col w-full h-full gap-10 mt-10 text-white bg-primary py-7 px-4 sm:px-7 lg:px-10"
       >
         <h1 className="text-3xl font-bold text-center">Free Consultation</h1>
 
@@ -226,7 +226,7 @@ export default function Home() {
 
       <section
         id="faq"
-        className="flex flex-col w-full h-full gap-10 mt-10 text-tertiary p-4"
+        className="flex flex-col w-full h-full gap-10 mt-10 text-tertiary py-7 px-4 sm:px-7 lg:px-10"
       >
         <TitleComponent title="Frequently Asked Question" />
 
