@@ -39,6 +39,7 @@ export default function CardNewsComponent({
         width={1024}
         height={1024}
         alt="News 1"
+        loading="lazy"
         className="object-contain sm:object-cover h-full w-full sm:object-center"
       />
 

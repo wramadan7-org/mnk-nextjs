@@ -15,13 +15,18 @@ import NEWS3 from "@/assets/images/news-3.jpg";
 import Image from "next/image";
 import ButtonComponent from "@/components/ButtonComponent";
 import CardNewsComponent from "@/components/CardNewsComponent";
+import AccordionComponent from "@/components/AccordionComponent";
+import { dataHome } from "@/libs/dataHome";
 
 export default function Home() {
   return (
     <main className="flex flex-col items-center justify-start min-h-screen bg-gray-100 overflow-x-hidden">
       <HeroComponent />
 
-      <section className="p-4 flex flex-col-reverse lg:flex-row flex-wrap w-full gap-10 mt-10">
+      <section
+        id="about us"
+        className="p-4 flex flex-col-reverse lg:flex-row flex-wrap w-full gap-10 mt-10"
+      >
         <div className="flex flex-col flex-[1_1_0%] gap-3">
           <span className="text-sm text-tertiary font-semibold">About Us</span>
 
@@ -49,12 +54,17 @@ export default function Home() {
             src={HomeSection1}
             width={500}
             height={300}
+            className="rounded"
+            loading="lazy"
             alt="Home Section 1"
           />
         </div>
       </section>
 
-      <section className="flex flex-col lg:flex-row flex-wrap w-full gap-10 mt-44 lg:mt-10 text-tertiary">
+      <section
+        id="introduce"
+        className="flex flex-col lg:flex-row flex-wrap w-full gap-10 mt-44 lg:mt-10 text-tertiary"
+      >
         <div className="h-full w-full flex flex-[1_1_0%] lg:flex-1/4">
           <div className="w-full lg:w-2/3 min-w-48 h-[15rem] lg:h-[25rem] bg-primary relative">
             &nbsp;
@@ -63,8 +73,9 @@ export default function Home() {
                 src={HomeSection2}
                 width={243}
                 height={200}
-                className="object-cover w-full h-full object-top lg:object-center"
+                className="object-cover w-full h-full object-top lg:object-center rounded"
                 alt="Home Section 2"
+                loading="lazy"
               />
             </div>
           </div>
@@ -120,7 +131,10 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="flex flex-col w-full gap-10 mt-10 text-tertiary p-4">
+      <section
+        id="products"
+        className="flex flex-col w-full gap-10 mt-10 text-tertiary p-4"
+      >
         <div className="flex flex-col gap-10">
           <div className="flex flex-col gap-2">
             <Image src={Logo} width={30} height={30} alt="MNK Logo" />
@@ -150,7 +164,10 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="flex flex-col w-full gap-10 mt-10 text-tertiary p-4">
+      <section
+        id="news & event"
+        className="flex flex-col w-full gap-10 mt-10 text-tertiary p-4"
+      >
         <TitleComponent title="Latest News & Event" isCentered />
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
@@ -185,6 +202,35 @@ export default function Home() {
           text="More News & Event"
           className="mx-auto"
         />
+      </section>
+
+      <section
+        id="free consultation"
+        className="flex flex-col w-full h-full gap-10 mt-10 text-white bg-primary px-4 py-7"
+      >
+        <h1 className="text-3xl font-bold text-center">Free Consultation</h1>
+
+        <p className="text-sm text-center max-w-xl mx-auto">
+          Looking to improve your blasting efficiency or secure a reliable
+          supply of Ammonium Nitrate? Speak with our experts today. Our free
+          consultation will help you explore tailored solutions for your mining
+          operations — with safety, reliability, and performance at the core.
+        </p>
+
+        <ButtonComponent
+          href="/contact-us"
+          text="Contact Us"
+          className="mx-auto"
+        />
+      </section>
+
+      <section
+        id="faq"
+        className="flex flex-col w-full h-full gap-10 mt-10 text-tertiary p-4"
+      >
+        <TitleComponent title="Frequently Asked Question" />
+
+        <AccordionComponent data={dataHome?.faq} />
       </section>
     </main>
   );
