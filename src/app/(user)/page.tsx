@@ -9,12 +9,16 @@ import MNKANFO from "@/assets/images/mnkanfo.png";
 import MNKDET from "@/assets/images/mnkdet.png";
 import MNKPRIMER from "@/assets/images/mnkprimer.png";
 import MNKMAX from "@/assets/images/mnkmax.png";
+import NEWS1 from "@/assets/images/news-1.jpg";
+import NEWS2 from "@/assets/images/news-2.jpg";
+import NEWS3 from "@/assets/images/news-3.jpg";
 import Image from "next/image";
 import ButtonComponent from "@/components/ButtonComponent";
+import CardNewsComponent from "@/components/CardNewsComponent";
 
 export default function Home() {
   return (
-    <main className="flex flex-col items-center justify-start min-h-screen bg-gray-100">
+    <main className="flex flex-col items-center justify-start min-h-screen bg-gray-100 overflow-x-hidden">
       <HeroComponent />
 
       <section className="p-4 flex flex-col-reverse lg:flex-row flex-wrap w-full gap-10 mt-10">
@@ -119,18 +123,12 @@ export default function Home() {
       <section className="flex flex-col w-full gap-10 mt-10 text-tertiary p-4">
         <div className="flex flex-col gap-10">
           <div className="flex flex-col gap-2">
-            <Image
-              src={Logo}
-              width={30}
-              height={30}
-              alt="MNK Logo"
-              className="mx-auto"
-            />
+            <Image src={Logo} width={30} height={30} alt="MNK Logo" />
 
-            <TitleComponent title="Our Product" isCentered />
+            <TitleComponent title="Our Product" />
           </div>
 
-          <p className="text-center">
+          <p className="text-start">
             MNK is the market leader in Indonesia with strong relationship with
             most of the leading players in Indonesia’s mining industries.
           </p>
@@ -149,6 +147,37 @@ export default function Home() {
               alt="Product"
             />
           ))}
+        </div>
+      </section>
+
+      <section className="flex flex-col w-full gap-10 mt-10 text-tertiary p-4">
+        <TitleComponent title="Our Work" isCentered />
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+          <CardNewsComponent
+            title={`CSR Inspiratif: PT MNK Gelar Nobar Film “Jumbo” Bersama 375 Siswa/i di
+          CGV Cikampek, Jawa Barat`}
+            image={NEWS1}
+            dateNews="2024-05-20T18:00:00Z"
+            commentCount={0}
+            createdBy="Admin"
+          />
+
+          <CardNewsComponent
+            title={`Ramadhan Berbagi: PT Multi Nitrotama Kimia Salurkan Sembako untuk para Jompo & Dhuafa di Wilayah Muara Kembang, Kutai Kartanegara.`}
+            image={NEWS2}
+            dateNews="2024-05-20T18:00:00Z"
+            commentCount={2}
+            createdBy="Admin"
+          />
+
+          <CardNewsComponent
+            title={`PT Multi Nitrotama Kimia berbagi paket sembako ke 200 warga di wilayah Dawuan Tengah, Cikampek`}
+            image={NEWS3}
+            dateNews="2024-05-20T18:00:00Z"
+            commentCount={5}
+            createdBy="Admin"
+          />
         </div>
       </section>
     </main>
