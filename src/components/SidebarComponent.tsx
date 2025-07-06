@@ -5,30 +5,14 @@ import {
   useMenuActions,
 } from "@/stores/menuStore";
 import Link from "next/link";
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 
 export default function SidebarComponent() {
   const isOpenBurger = useIsOpenBurger();
   const activeMenu = useActiveMenu();
-  const { toggleBurger, handleClickMenu } = useMenuActions();
+  const { handleClickMenu } = useMenuActions();
 
   const sidebarRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    function handleClickOutside(event: MouseEvent) {
-      if (
-        sidebarRef.current &&
-        !sidebarRef.current.contains(event.target as Node)
-      ) {
-        if (isOpenBurger) handleClickMenu("");
-      }
-    }
-
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, [handleClickMenu, isOpenBurger, toggleBurger]);
 
   if (!isOpenBurger) {
     return null;

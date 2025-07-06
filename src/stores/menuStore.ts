@@ -8,7 +8,7 @@ type State = {
 
 type Actions = {
   actions: {
-    toggleBurger: () => void;
+    toggleBurger: (isActive?: boolean) => void;
     setActiveMenu: (menu: MenuType) => void;
     handleClickMenu: (menu?: MenuType) => void;
   };
@@ -18,11 +18,14 @@ const useMenuStore = create<State & Actions>((set) => ({
   isOpenBurger: false,
   activeMenu: "",
   actions: {
-    toggleBurger: () => set((state) => ({ isOpenBurger: !state.isOpenBurger })),
+    toggleBurger: (isActive?: boolean) =>
+      set((state) => ({
+        isOpenBurger: isActive ? isActive : !state.isOpenBurger,
+      })),
     setActiveMenu: (menu: MenuType) => set({ activeMenu: menu }),
     handleClickMenu: (menu?: MenuType) =>
       set((state) => {
-        if (!menu) {
+        if (!menu?.length) {
           return { isOpenBurger: !state.isOpenBurger };
         } else {
           return { isOpenBurger: !state.isOpenBurger, activeMenu: menu };
