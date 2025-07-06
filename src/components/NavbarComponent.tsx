@@ -1,6 +1,7 @@
 "use client";
 import { useIsOpenBurger, useMenuActions } from "@/stores/menuStore";
 import Link from "next/link";
+import ButtonComponent from "./ButtonComponent";
 
 export default function NavbarComponent() {
   const isOpenBurger = useIsOpenBurger();
@@ -15,7 +16,7 @@ export default function NavbarComponent() {
   };
 
   return (
-    <nav className="flex sticky top-0 items-center justify-between p-4 bg-primary">
+    <nav className="flex sticky top-0 items-center justify-between p-4 bg-primary z-50">
       <Link
         href="/"
         onClick={() => handleToggleMenu("home")}
@@ -82,13 +83,11 @@ export default function NavbarComponent() {
       </ul>
 
       <div className="hidden lg:flex items-center space-x-4">
-        <Link
+        <ButtonComponent
           href="/contact-us"
           onClick={() => handleToggleMenu("contact-us")}
-          className="bg-secondary text-white px-4 py-2 rounded hover:bg-secondary/80"
-        >
-          Contact Us
-        </Link>
+          text="Contact Us"
+        />
       </div>
 
       <div className="lg:hidden">
