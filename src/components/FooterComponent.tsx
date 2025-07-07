@@ -7,7 +7,7 @@ import Whatsapp from "@/assets/icons/whatsapp-white.svg";
 
 export default function FooterComponent() {
   return (
-    <footer className="bg-primary w-full h-fit p-4 flex flex-[1_1_0%] flex-col gap-8">
+    <footer className="bg-primary w-full h-fit py-7 px-4 sm:px-7 lg:px-10 flex flex-[1_1_0%] flex-col gap-8">
       <div className="flex flex-[1_1_0%] flex-wrap flex-row justify-start sm:justify-between gap-8">
         <div className="flex flex-col gap-3 w-full md:lg-max-w-xs lg:max-w-3xs">
           <h2 className="text-secondary">Head Office</h2>
