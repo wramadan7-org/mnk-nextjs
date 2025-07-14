@@ -5,7 +5,11 @@ import PlusMark from "@/assets/icons/plusmark.svg";
 import { useState } from "react";
 import { AccordionProps } from "@/types/accordionType";
 
-export default function AccordionComponent({ data }: AccordionProps) {
+export default function AccordionComponent({
+  data,
+  isExpanded,
+  isIcon,
+}: AccordionProps) {
   const [openIndex, setOpenIndex] = useState<number | null>(0); // default open first
 
   const toggleAccordion = (index: number) => {
@@ -21,7 +25,7 @@ export default function AccordionComponent({ data }: AccordionProps) {
           <button
             key={`accordion-${item.id}`}
             type="button"
-            onClick={() => toggleAccordion(index)}
+            onClick={() => isExpanded && toggleAccordion(index)}
             className={`grid grid-cols-12 py-5 ${
               index !== data?.length - 1 ? "border-b border-gray-300" : ""
             } cursor-pointer text-left`}
@@ -31,7 +35,13 @@ export default function AccordionComponent({ data }: AccordionProps) {
             </div>
 
             <div className="col-span-12 sm:col-span-11 grid grid-cols-12 gap-2">
-              <div className="col-span-10 sm:col-span-11 flex flex-col gap-3">
+              <div
+                className={`${
+                  isIcon
+                    ? "col-span-10 sm:col-span-11"
+                    : "col-span-11 sm:col-span-12"
+                } flex flex-col gap-3`}
+              >
                 <h1 className="text-2xl font-bold text-black">
                   {item.question}
                 </h1>
@@ -45,23 +55,25 @@ export default function AccordionComponent({ data }: AccordionProps) {
                 </div>
               </div>
 
-              <div className="col-span-2 sm:col-span-1 flex items-start justify-center">
-                <div
-                  className={`shadow w-fit h-fit rounded-full border ${
-                    isOpen
-                      ? "border-black bg-black p-3"
-                      : "border-gray-300 bg-gray-300 p-3"
-                  }`}
-                >
-                  <Image
-                    src={isOpen ? XMark : PlusMark}
-                    width={20}
-                    height={20}
-                    alt={isOpen ? "Close" : "Expand"}
-                    className="w-3 h-3 sm:w-5 sm:h-5"
-                  />
+              {isIcon && (
+                <div className="col-span-2 sm:col-span-1 flex items-start justify-center">
+                  <div
+                    className={`shadow w-fit h-fit rounded-full border ${
+                      isOpen
+                        ? "border-black bg-black p-3"
+                        : "border-gray-300 bg-gray-300 p-3"
+                    }`}
+                  >
+                    <Image
+                      src={isOpen ? XMark : PlusMark}
+                      width={20}
+                      height={20}
+                      alt={isOpen ? "Close" : "Expand"}
+                      className="w-3 h-3 sm:w-5 sm:h-5"
+                    />
+                  </div>
                 </div>
-              </div>
+              )}
             </div>
           </button>
         );

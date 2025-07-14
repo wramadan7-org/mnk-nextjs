@@ -24,7 +24,7 @@ export default function Home() {
       <HeroComponent />
 
       <section
-        id="about us"
+        id="introduction"
         className="py-7 px-4 sm:px-7 lg:px-10 flex flex-col-reverse lg:flex-row flex-wrap w-full gap-10 mt-10"
       >
         <div className="flex flex-col flex-[1_1_0%] gap-3">
@@ -230,7 +230,7 @@ export default function Home() {
       >
         <TitleComponent title="Frequently Asked Question" />
 
-        <AccordionComponent data={dataHome?.faq} />
+        <AccordionComponent data={dataHome?.faq} isExpanded isIcon />
       </section>
     </main>
   );

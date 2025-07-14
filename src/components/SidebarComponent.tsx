@@ -6,8 +6,10 @@ import {
 } from "@/stores/menuStore";
 import Link from "next/link";
 import { useRef } from "react";
+import { usePathname } from "next/navigation";
 
 export default function SidebarComponent() {
+  const pathname = usePathname();
   const isOpenBurger = useIsOpenBurger();
   const activeMenu = useActiveMenu();
   const { handleClickMenu } = useMenuActions();
@@ -29,10 +31,10 @@ export default function SidebarComponent() {
       <ul className="space-y-2">
         <li className="flex group">
           <Link
-            href="#"
+            href="/"
             onClick={() => handleClickMenu("home")}
             className={`w-full ${
-              activeMenu === "home" && "text-secondary"
+              activeMenu === "home" || (pathname === "/" && "text-secondary")
             } group-hover:text-secondary`}
           >
             Home
@@ -40,10 +42,23 @@ export default function SidebarComponent() {
         </li>
         <li className="flex group">
           <Link
+            href="/about-us"
+            onClick={() => handleClickMenu("about-us")}
+            className={`w-full ${
+              activeMenu === "about-us" ||
+              (pathname === "/about-us" && "text-secondary")
+            } group-hover:text-secondary`}
+          >
+            About Us
+          </Link>
+        </li>
+        <li className="flex group">
+          <Link
             href="#"
             onClick={() => handleClickMenu("product-service")}
             className={`w-full ${
-              activeMenu === "product-service" && "text-secondary"
+              activeMenu === "product-service" ||
+              (pathname === "/product-service" && "text-secondary")
             } group-hover:text-secondary`}
           >
             Product & Service
@@ -54,7 +69,8 @@ export default function SidebarComponent() {
             href="#"
             onClick={() => handleClickMenu("supply-chain")}
             className={`w-full ${
-              activeMenu === "supply-chain" && "text-secondary"
+              activeMenu === "supply-chain" ||
+              (pathname === "/supply-chain" && "text-secondary")
             } group-hover:text-secondary`}
           >
             Supply Chain
@@ -65,7 +81,7 @@ export default function SidebarComponent() {
             href="#"
             onClick={() => handleClickMenu("csr")}
             className={`w-full ${
-              activeMenu === "csr" && "text-secondary"
+              activeMenu === "csr" || (pathname === "/csr" && "text-secondary")
             } group-hover:text-secondary`}
           >
             CSR
@@ -76,7 +92,8 @@ export default function SidebarComponent() {
             href="#"
             onClick={() => handleClickMenu("news")}
             className={`w-full ${
-              activeMenu === "news" && "text-secondary"
+              activeMenu === "news" ||
+              (pathname === "/news" && "text-secondary")
             } group-hover:text-secondary`}
           >
             News
@@ -87,7 +104,8 @@ export default function SidebarComponent() {
             href="#"
             onClick={() => handleClickMenu("career")}
             className={`w-full ${
-              activeMenu === "career" && "text-secondary"
+              activeMenu === "career" ||
+              (pathname === "/career" && "text-secondary")
             } group-hover:text-secondary`}
           >
             Career

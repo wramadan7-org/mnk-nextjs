@@ -1,5 +1,6 @@
 export type MenuType =
   | "home"
+  | "about-us"
   | "product-service"
   | "supply-chain"
   | "csr"
