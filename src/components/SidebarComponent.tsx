@@ -113,7 +113,7 @@ export default function SidebarComponent() {
         </li>
         <li className="flex group">
           <Link
-            href="#"
+            href="/contact-us"
             onClick={() => handleClickMenu("contact-us")}
             className="w-full bg-secondary group-hover:bg-secondary/80 text-center rounded py-1 text-white"
           >

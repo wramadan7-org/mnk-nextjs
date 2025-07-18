@@ -6,6 +6,10 @@ import Image from "next/image";
 import AboutUsSection1 from "@/assets/images/home-section-01.jpg";
 import AccordionComponent from "@/components/AccordionComponent";
 import { dataAboutUs } from "@/libs/dataAboutUs";
+import Link from "next/link";
+import FacebokOrange from "@/assets/icons/facebook-orange.svg";
+import TwitterOrange from "@/assets/icons/twitter-orange.svg";
+import WhatsappOrange from "@/assets/icons/whatsapp-orange.svg";
 
 export default function AboutUs() {
   return (
@@ -16,7 +20,7 @@ export default function AboutUs() {
         id="introduction"
         className="py-7 px-4 sm:px-7 lg:px-10 flex flex-col-reverse lg:flex-row flex-wrap w-full gap-10 lg:gap-32 mt-10"
       >
-        <div className="flex flex-col flex-[1_1_40%] gap-3">
+        <div className="flex flex-col flex-[1_1_30%] gap-3">
           <span className="text-sm text-tertiary font-semibold">About Us</span>
 
           <TitleComponent title={`PT. Multi Nitrotama Kimia\n(MNK)`} />
@@ -59,18 +63,20 @@ export default function AboutUs() {
           </div>
         </div>
 
-        <div className="flex flex-col flex-[1_1_0%] items-center justify-center relative">
-          <div className="bg-primary w-3/4 sm:w-1/2 lg:w-4/5 h-[19rem] sm:h-[22rem] lg:h-96 ml-16 lg:ml-auto"></div>
-
-          <div className="absolute -top-5 sm:-top-8 lg:-top-5 -right-3 sm:-right-44 lg:right-10 transform w-full lg:min-w-[337px] h-96">
-            <Image
-              src={AboutUsSection1}
-              width={384}
-              height={384}
-              loading="lazy"
-              className="w-1/2 min-w-[300px] lg:w-full lg:h-full"
-              alt="About Us Section 1"
-            />
+        <div className="flex flex-col flex-[1_1_0%] items-center justify-center relative w-full min-h-60 lg:min-h-80">
+          <div className="absolute top-0 left-1/2 w-1/2 lg:left-1/5 h-4/5 min-h-60 lg:min-h-80 lg:w-4/5 transform -translate-x-1/2 lg:-translate-x-0 max-w-96">
+            <div className="w-full h-full bg-primary relative">
+              <div className="absolute -top-5 -left-10 w-full h-full">
+                <Image
+                  src={AboutUsSection1}
+                  width={384}
+                  height={384}
+                  loading="lazy"
+                  className="object-cover object-center h-full"
+                  alt="About Us Section 1"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -82,6 +88,71 @@ export default function AboutUs() {
         <TitleComponent title="Vision & Mission" />
 
         <AccordionComponent data={dataAboutUs.visiMissi} />
+      </section>
+
+      <section
+        id="bod"
+        className="py-7 px-4 sm:px-7 lg:px-10 flex flex-col w-full gap-10 mt-10"
+      >
+        <TitleComponent title="Board of Director" />
+
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-5 justify-items-center">
+          {dataAboutUs.boardOfDirectors.map((item, index) => (
+            <div
+              key={`${item?.name}-${index}`}
+              className="rounded-md overflow-hidden w-full h-[40rem] max-w-96 lg:max-w-full lg:h-[38rem] bg-gray-500 relative group"
+            >
+              <Image
+                src={item?.image}
+                width={380}
+                height={380}
+                className="w-full h-full object-cover object-center duration-500 ease-in-out group-hover:scale-100 scale-105"
+                alt={item?.name}
+              />
+
+              <div className="absolute bottom-0 left-0 w-full h-full bg-primary translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-in-out opacity-70 z-20"></div>
+
+              <div className="absolute bottom-5 left-1/2 transform -translate-x-1/2 bg-white rounded-md w-11/12 h-fit z-40 text-tertiary flex flex-col p-5 gap-1">
+                <h2 className="text-base font-bold uppercase">{item?.title}</h2>
+
+                <h1 className="text-xl font-extrabold uppercase text-black">
+                  {item?.name}
+                </h1>
+
+                <p className="text-sm line-clamp-4">{item?.description}</p>
+
+                <div className="flex flex-row items-center justify-start gap-3 mt-3">
+                  <Link href={item?.facebook} aria-label="Facebook">
+                    <Image
+                      src={FacebokOrange}
+                      width={10}
+                      height={10}
+                      alt={`${item?.name}-facebook`}
+                    />
+                  </Link>
+
+                  <Link href={item?.twitter} aria-label="Twitter">
+                    <Image
+                      src={TwitterOrange}
+                      width={18}
+                      height={18}
+                      alt={`${item?.name}-twitter`}
+                    />
+                  </Link>
+
+                  <Link href={item?.whatsapp} aria-label="Whatsapp">
+                    <Image
+                      src={WhatsappOrange}
+                      width={15}
+                      height={15}
+                      alt={`${item?.name}-whatsapp`}
+                    />
+                  </Link>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
       </section>
     </main>
   );
