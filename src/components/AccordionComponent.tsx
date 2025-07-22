@@ -7,7 +7,7 @@ import { AccordionProps } from "@/types/accordionType";
 
 export default function AccordionComponent({
   data,
-  isExpanded,
+  expanded,
   isIcon,
 }: AccordionProps) {
   const [openIndex, setOpenIndex] = useState<number | null>(0); // default open first
@@ -25,10 +25,10 @@ export default function AccordionComponent({
           <button
             key={`accordion-${item.id}`}
             type="button"
-            onClick={() => isExpanded && toggleAccordion(index)}
+            onClick={() => expanded === "click" && toggleAccordion(index)}
             className={`grid grid-cols-12 py-5 ${
               index !== data?.length - 1 ? "border-b border-gray-300" : ""
-            } cursor-pointer text-left`}
+            } ${expanded === "click" && "cursor-pointer"} text-left`}
           >
             <div className="col-span-12 sm:col-span-1 flex items-start justify-start sm:items-center sm:justify-center">
               <p className="text-gray-500 font-bold text-3xl">0{index + 1}</p>
@@ -48,7 +48,9 @@ export default function AccordionComponent({
 
                 <div
                   className={`transition-all duration-300 overflow-hidden ${
-                    isOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
+                    expanded === "expand" || (isOpen && expanded === "click")
+                      ? "max-h-[500px] opacity-100"
+                      : "max-h-0 opacity-0"
                   }`}
                 >
                   <p className="text-sm text-gray-600 mt-1">{item.answer}</p>

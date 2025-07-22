@@ -81,4 +81,31 @@ He earned his Bachelor of Computing degree from Gunadharma University in 1995 an
       whatsapp: "",
     },
   ],
+  environmentProblems: [
+    {
+      id: 1,
+      question:
+        "The use of environmentally friendly and recyclable raw materials and energy",
+      answer:
+        "In improving the efficient use of raw materials and energy, MNK always strive to minimize/reduce the use of energy such as gas, water and electricity.",
+    },
+    {
+      id: 2,
+      question: "MNK waste management system",
+      answer:
+        "In 2019, for non-B3 (non dangerous) waste management, MNK collaborates with local entrepreneurs. All non-B3 recycle-able waste is managed by local entrepreneurs, while the B3 dangerous waste is handed over to collectors having the permit from the Ministry of Environment.",
+    },
+    {
+      id: 3,
+      question: "Environmental issues complaints mechanism",
+      answer:
+        "In 2019, MNK did not receive any environmental issues complaint. However, MNK continuously communicates its environmental improvement management and monitoring efforts to the managers and related agencies.",
+    },
+    {
+      id: 4,
+      question: "Environmental Certification",
+      answer:
+        "MNK has consistently managed to maintain the implementation of ISO14001, and in January 2019, the environmental management system has been successfully re-certified.",
+    },
+  ],
 };

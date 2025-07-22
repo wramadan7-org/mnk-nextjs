@@ -230,7 +230,7 @@ export default function Home() {
       >
         <TitleComponent title="Frequently Asked Question" />
 
-        <AccordionComponent data={dataHome?.faq} isExpanded isIcon />
+        <AccordionComponent data={dataHome?.faq} expanded="click" isIcon />
       </section>
     </main>
   );

@@ -1,6 +1,6 @@
 export type AccordionProps = {
   data: AccordionItem[];
-  isExpanded?: boolean;
+  expanded?: "expand" | "click";
   isIcon?: boolean;
 };
 
