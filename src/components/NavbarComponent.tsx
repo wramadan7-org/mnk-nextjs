@@ -30,7 +30,7 @@ export default function NavbarComponent() {
             href="/"
             onClick={() => handleClickMenu("home")}
             className={`${
-              activeMenu === "home" || (pathname === "/" && "text-secondary")
+              (activeMenu === "home" || pathname === "/") && "text-secondary"
             } hover:text-secondary`}
           >
             Home
@@ -41,8 +41,8 @@ export default function NavbarComponent() {
             href="/about-us"
             onClick={() => handleClickMenu("about-us")}
             className={`${
-              activeMenu === "about-us" ||
-              (pathname === "/about-us" && "text-secondary")
+              (activeMenu === "about-us" || pathname === "/about-us") &&
+              "text-secondary"
             } hover:text-secondary`}
           >
             About Us
@@ -53,8 +53,9 @@ export default function NavbarComponent() {
             href="/product-service"
             onClick={() => handleClickMenu("product-service")}
             className={`${
-              activeMenu === "product-service" ||
-              (pathname === "/product-service" && "text-secondary")
+              (activeMenu === "product-service" ||
+                pathname === "/product-service") &&
+              "text-secondary"
             } hover:text-secondary`}
           >
             Product & Service
@@ -65,8 +66,8 @@ export default function NavbarComponent() {
             href="/supply-chain"
             onClick={() => handleClickMenu("supply-chain")}
             className={`${
-              activeMenu === "supply-chain" ||
-              (pathname === "/supply-chain" && "text-secondary")
+              (activeMenu === "supply-chain" || pathname === "/supply-chain") &&
+              "text-secondary"
             } hover:text-secondary`}
           >
             Supply Chain
@@ -77,7 +78,7 @@ export default function NavbarComponent() {
             href="/csr"
             onClick={() => handleClickMenu("csr")}
             className={`${
-              activeMenu === "csr" || (pathname === "/csr" && "text-secondary")
+              (activeMenu === "csr" || pathname === "/csr") && "text-secondary"
             } hover:text-secondary`}
           >
             CSR
@@ -88,8 +89,8 @@ export default function NavbarComponent() {
             href="/news"
             onClick={() => handleClickMenu("news")}
             className={`${
-              activeMenu === "news" ||
-              (pathname === "/news" && "text-secondary")
+              (activeMenu === "news" || pathname === "/news") &&
+              "text-secondary"
             } hover:text-secondary`}
           >
             News
@@ -100,8 +101,8 @@ export default function NavbarComponent() {
             href="/career"
             onClick={() => handleClickMenu("career")}
             className={`${
-              activeMenu === "career" ||
-              (pathname === "/career" && "text-secondary")
+              (activeMenu === "career" || pathname === "/career") &&
+              "text-secondary"
             } hover:text-secondary`}
           >
             Career
