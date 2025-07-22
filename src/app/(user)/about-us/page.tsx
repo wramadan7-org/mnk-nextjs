@@ -112,10 +112,10 @@ export default function AboutUs() {
 
               <div className="absolute bottom-0 left-0 w-full h-full bg-primary translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-in-out opacity-70 z-20"></div>
 
-              <div className="absolute bottom-5 left-1/2 transform -translate-x-1/2 bg-white rounded-md w-11/12 h-fit z-40 text-tertiary flex flex-col p-5 gap-1">
+              <div className="absolute bottom-5 left-1/2 transform -translate-x-1/2 bg-white rounded-md w-11/12 h-fit z-40 text-tertiary flex flex-col p-5 gap-1 group/card hover:cursor-pointer">
                 <h2 className="text-base font-bold uppercase">{item?.title}</h2>
 
-                <h1 className="text-xl font-extrabold uppercase text-black">
+                <h1 className="text-xl font-extrabold uppercase text-black group-hover/card:text-secondary">
                   {item?.name}
                 </h1>
 
