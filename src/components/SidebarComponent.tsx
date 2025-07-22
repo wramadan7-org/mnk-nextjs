@@ -54,7 +54,7 @@ export default function SidebarComponent() {
         </li>
         <li className="flex group">
           <Link
-            href="#"
+            href="/product-service"
             onClick={() => handleClickMenu("product-service")}
             className={`w-full ${
               (activeMenu === "product-service" ||
@@ -67,7 +67,7 @@ export default function SidebarComponent() {
         </li>
         <li className="flex group">
           <Link
-            href="#"
+            href="/supply-chain"
             onClick={() => handleClickMenu("supply-chain")}
             className={`w-full ${
               (activeMenu === "supply-chain" || pathname === "/supply-chain") &&
@@ -79,7 +79,7 @@ export default function SidebarComponent() {
         </li>
         <li className="flex group">
           <Link
-            href="#"
+            href="/csr"
             onClick={() => handleClickMenu("csr")}
             className={`w-full ${
               (activeMenu === "csr" || pathname === "/csr") && "text-secondary"
@@ -90,7 +90,7 @@ export default function SidebarComponent() {
         </li>
         <li className="flex group">
           <Link
-            href="#"
+            href="/news"
             onClick={() => handleClickMenu("news")}
             className={`w-full ${
               (activeMenu === "news" || pathname === "/news") &&
@@ -102,7 +102,7 @@ export default function SidebarComponent() {
         </li>
         <li className="flex group">
           <Link
-            href="#"
+            href="/career"
             onClick={() => handleClickMenu("career")}
             className={`w-full ${
               (activeMenu === "career" || pathname === "/career") &&
