@@ -68,3 +68,17 @@ pre {
   object-fit: cover;
   object-position: center;
 }
+
+::-webkit-scrollbar {
+  width: 6px; /* ukuran vertikal */
+  height: 6px; /* ukuran horizontal */
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(100, 100, 100, 0.5);
+  border-radius: 9999px;
+}

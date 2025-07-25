@@ -42,9 +42,9 @@ export const dataAboutUs = {
       name: "Ratno Paskalis Hendrawan Touor",
       description: `Indonesian citizen, 45 years old. He has served as President Director of PT Multi Nitrotama Kimia since April 2018. Previously, he served as Director of Finance of PT Multi Nitrotama Kimia since March 2017. He has more than 12 years of experience in the banking industry, especially in the Corporate and Investment Banking, with the last position as Vice President at Risk Management Group in PT Bank Permata Tbk. He served as Civil Department Head at PT Astra Agro Lestari Tbk. in 2002-2003. He earned a Bachelor’s Degree in Civil Engineering from Atma Jaya Yogyakarta University in 2001 and Master of Business Administration from School of Business and Management – Bandung Institute of Technology with Cum Laude in 2012.
 He is an alumni of Harvard Business School, after completing the Advanced Management Program in 2024.`,
-      facebook: "",
-      twitter: "",
-      whatsapp: "",
+      facebook: "https://wa.me/+6281933195630",
+      twitter: "https://wa.me/+6281933195630",
+      whatsapp: "https://wa.me/+6281933195630",
     },
     {
       image: AdityaBod,
@@ -52,9 +52,9 @@ He is an alumni of Harvard Business School, after completing the Advanced Manage
       name: "Adityagung Murbantoro",
       description: `Indonesian Citizen, 51 years old. He joined PT Multi Nitrotama Kimia as Director of Production since November 2023. Previously he served as a Technical and Development General Manager of PT Pupuk Kujang. He earned his Bachelor’s degree in Chemical Engineering from Gadjah Mada University in 1997 and Master’s degree in Chemical Engineering from Bandung Institute of Technology in 2003.
 `,
-      facebook: "",
-      twitter: "",
-      whatsapp: "",
+      facebook: "https://wa.me/+6281933195630",
+      twitter: "https://wa.me/+6281933195630",
+      whatsapp: "https://wa.me/+6281933195630",
     },
     {
       image: ParluhutanBod,
@@ -62,9 +62,9 @@ He is an alumni of Harvard Business School, after completing the Advanced Manage
       name: "Parluhutan Sinambela",
       description: `Indonesian citizen, 55 years old. He joined PT Multi Nitrotama Kimia since 2010 as General Manager Accounting & Finance and served as Director since March 2019. Previously, he served as Auditor at Public Accounting Firm KPMG-Hanadi Sudjendro & Rekan and Grant Thornton Hendrawinata & Rekan from 1995 to 2000. He then served in several coal and manufacturing companies in Indonesia and Thailand from 2001 to 2010. He last served in a coal mining company at PT Multi Tambangjaya Utama as Jakarta Representative Manager. He earned his Bachelor’s degree in Accounting from Andalas University in 1995. He holds a Chartered Accountant from Institute of Indonesia Chartered Accountant and Registered Accountant from Ministry of Finance of the Republic of Indonesia.
 `,
-      facebook: "",
-      twitter: "",
-      whatsapp: "",
+      facebook: "https://wa.me/+6281933195630",
+      twitter: "https://wa.me/+6281933195630",
+      whatsapp: "https://wa.me/+6281933195630",
     },
     {
       image: BayuBod,
@@ -76,9 +76,9 @@ Before joining MNK, he accumulated over 12 years of experience in the Supply Cha
 
 He earned his Bachelor of Computing degree from Gunadharma University in 1995 and obtained his Master's degree from the Faculty of Computing and Information Technology – School of Business Systems at Monash University in Victoria, Australia, in 1998. Additionally, he completed the Advanced Management Program at The Wharton School, University of Pennsylvania, in 2024.
 `,
-      facebook: "",
-      twitter: "",
-      whatsapp: "",
+      facebook: "https://wa.me/+6281933195630",
+      twitter: "https://wa.me/+6281933195630",
+      whatsapp: "https://wa.me/+6281933195630",
     },
   ],
   environmentProblems: [
