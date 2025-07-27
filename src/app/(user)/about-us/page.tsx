@@ -22,7 +22,7 @@ export default function AboutUs() {
 
       <section
         id="introduction"
-        className="py-7 px-4 sm:px-7 lg:px-10 flex flex-col-reverse lg:flex-row flex-wrap w-full gap-10 lg:gap-32 mt-10"
+        className="container py-7 px-4 sm:px-7 lg:px-10 flex flex-col-reverse lg:flex-row flex-wrap w-full gap-10 lg:gap-32 mt-10"
       >
         <div className="flex flex-col flex-[1_1_30%] gap-3">
           <span className="text-sm text-tertiary font-semibold">About Us</span>
@@ -87,7 +87,7 @@ export default function AboutUs() {
 
       <section
         id="vission&mission"
-        className="py-7 px-4 sm:px-7 lg:px-10 flex flex-col w-full gap-10 mt-10"
+        className="container py-7 px-4 sm:px-7 lg:px-10 flex flex-col w-full gap-10 mt-10"
       >
         <TitleComponent title="Vision & Mission" />
 
@@ -96,7 +96,7 @@ export default function AboutUs() {
 
       <section
         id="bod"
-        className="py-7 px-4 sm:px-7 lg:px-10 flex flex-col w-full gap-10 mt-10"
+        className="container py-7 px-4 sm:px-7 lg:px-10 flex flex-col w-full gap-10 mt-10"
       >
         <TitleComponent title="Board of Director" />
 

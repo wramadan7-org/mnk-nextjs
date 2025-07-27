@@ -20,7 +20,7 @@ export default function Csr() {
 
       <section
         id="introduction"
-        className="py-7 px-4 sm:px-7 lg:px-10 flex flex-col lg:flex-row flex-wrap w-full gap-10 mt-10"
+        className="container py-7 px-4 sm:px-7 lg:px-10 flex flex-col lg:flex-row flex-wrap w-full gap-10 mt-10"
       >
         <h1 className="text-center text-3xl text-black font-bold">
           MNK, which has its operation in Cikampek, periodically undertakes
@@ -88,7 +88,7 @@ export default function Csr() {
 
       <section
         id="csr-programs"
-        className="py-7 px-4 sm:px-7 lg:px-10 flex flex-col flex-wrap w-full gap-10 mt-10"
+        className="container py-7 px-4 sm:px-7 lg:px-10 flex flex-col flex-wrap w-full gap-10 mt-10"
       >
         <h1 className="text-center text-3xl text-black font-bold">
           To realize this program, In 2019, MNK has constantly and continuously
@@ -180,14 +180,14 @@ export default function Csr() {
 
       <section
         id="slider-csr"
-        className="h-72 md:h-80 lg:h-96 xl:h-[27rem] w-full"
+        className="container h-72 md:h-80 lg:h-96 xl:h-[27rem] w-full"
       >
         <SwiperCsrComponent />
       </section>
 
       <section
         id="faq"
-        className="flex flex-col w-full h-full gap-10 mt-10 text-tertiary py-7 px-4 sm:px-7 lg:px-10"
+        className="container flex flex-col w-full h-full gap-10 mt-10 text-tertiary py-7 px-4 sm:px-7 lg:px-10"
       >
         <TitleComponent
           title="MNK Social Responsibility Related to 
