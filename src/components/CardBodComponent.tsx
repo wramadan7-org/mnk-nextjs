@@ -16,6 +16,7 @@ export default function CardBodComponent(
   const handleCloseDialog = () => {
     setIsOpenDialogState(false);
   };
+
   const handleOpenDialog = () => {
     setIsOpenDialogState(true);
   };

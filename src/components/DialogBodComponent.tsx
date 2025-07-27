@@ -1,7 +1,14 @@
 "use client";
 import { dataAboutUs } from "@/libs/dataAboutUs";
 import { DialogProps } from "@/types/dialogType";
-import { Button, Dialog, DialogActions, DialogContent } from "@mui/material";
+import {
+  Button,
+  Dialog,
+  DialogActions,
+  DialogContent,
+  useMediaQuery,
+  useTheme,
+} from "@mui/material";
 import Image from "next/image";
 
 type DialogBodProps = {
@@ -13,11 +20,15 @@ export default function DialogBodComponent({
   onClose,
   data,
 }: DialogProps & DialogBodProps) {
+  const theme = useTheme();
+  const fullScreen = useMediaQuery(theme.breakpoints.down("sm"));
+
   return (
     <Dialog
       open={isOpen}
       onClose={onClose}
-      fullWidth
+      fullScreen={fullScreen}
+      fullWidth={!fullScreen}
       maxWidth="md"
       scroll="paper"
       aria-labelledby="dialog-bod"
