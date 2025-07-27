@@ -19,7 +19,7 @@ export default function NavbarComponent() {
       <Link
         href="/"
         onClick={() => handleClickMenu("home")}
-        className="text-lg font-bold dark:text-white text-black"
+        className="text-lg font-bold text-white"
       >
         MNK
       </Link>
@@ -121,7 +121,7 @@ export default function NavbarComponent() {
       <div className="lg:hidden">
         <button
           type="button"
-          className="dark:text-white text-black focus:outline-none cursor-pointer"
+          className="text-white focus:outline-none cursor-pointer"
           onClick={() => handleClickMenu("")}
           aria-expanded={isOpenBurger}
           aria-controls="navbar-menu"

@@ -12,7 +12,7 @@ export default function FooterComponent() {
         <div className="flex flex-col gap-3 w-full md:lg-max-w-xs lg:max-w-3xs">
           <h2 className="text-secondary">Head Office</h2>
 
-          <pre className="text-wrap text-sm">
+          <pre className="text-wrap text-sm text-white">
             Equity Tower 41st Floor Suite A Sudirman Central Business Disctrict
             (SCBD)
             <br />
@@ -27,7 +27,7 @@ export default function FooterComponent() {
         <div className="flex flex-col gap-3 w-full md:lg-max-w-xs lg:max-w-3xs">
           <h2 className="text-secondary">Plan Site</h2>
 
-          <pre className="text-wrap text-sm">
+          <pre className="text-wrap text-sm text-white">
             Kawasan Industri Kujang Cikampek
             <br />
             Jl. Jend. A. Yani, Dawuan Cikampek, Jawa Barat 41373
@@ -41,7 +41,7 @@ export default function FooterComponent() {
         <div className="flex flex-col gap-3 w-full md:lg-max-w-xs lg:max-w-3xs">
           <h2 className="text-secondary">Operational Office</h2>
 
-          <pre className="text-wrap text-sm">
+          <pre className="text-wrap text-sm text-white">
             Jl. Kol. Syarifoedin Yoes No. 69 Balikpapan Kalimantan Timur 76115
             <br />
             Telp : (+62-542) 8520 519, (+62-542) 8520 520
@@ -53,7 +53,7 @@ export default function FooterComponent() {
         <div className="flex flex-col gap-3 w-full md:lg-max-w-xs lg:max-w-3xs">
           <h2 className="text-secondary">Pusat Teknologi Terpadu</h2>
 
-          <pre className="text-wrap text-sm">
+          <pre className="text-wrap text-sm text-white">
             Jln. Husni Thamrin RT.08
             <br />
             Kel. Muara Kembang Dalam
