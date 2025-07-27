@@ -7,6 +7,13 @@ import AboutUsSection1 from "@/assets/images/home-section-01.jpg";
 import AccordionComponent from "@/components/AccordionComponent";
 import { dataAboutUs } from "@/libs/dataAboutUs";
 import CardBodComponent from "@/components/CardBodComponent";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "MNK - About Us",
+  description:
+    "Learn more about PT. Multi Nitrotama Kimia (MNK), Indonesia’s leading provider of mining explosives and blasting services.",
+};
 
 export default function AboutUs() {
   return (

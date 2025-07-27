@@ -23,22 +23,58 @@ export default function SwiperCsrComponent() {
       }}
     >
       <SwiperSlide>
-        <Image src={SliderCsr1} width={400} height={400} alt="Slider 1" />
+        <Image
+          src={SliderCsr1}
+          width={400}
+          height={400}
+          alt="Slider 1"
+          loading="lazy"
+        />
       </SwiperSlide>
       <SwiperSlide>
-        <Image src={SliderCsr2} width={400} height={400} alt="Slider 2" />
+        <Image
+          src={SliderCsr2}
+          width={400}
+          height={400}
+          alt="Slider 2"
+          loading="lazy"
+        />
       </SwiperSlide>
       <SwiperSlide>
-        <Image src={SliderCsr3} width={400} height={400} alt="Slider 3" />
+        <Image
+          src={SliderCsr3}
+          width={400}
+          height={400}
+          alt="Slider 3"
+          loading="lazy"
+        />
       </SwiperSlide>
       <SwiperSlide>
-        <Image src={SliderCsr4} width={400} height={400} alt="Slider 4" />
+        <Image
+          src={SliderCsr4}
+          width={400}
+          height={400}
+          alt="Slider 4"
+          loading="lazy"
+        />
       </SwiperSlide>
       <SwiperSlide>
-        <Image src={SliderCsr5} width={400} height={400} alt="Slider 5" />
+        <Image
+          src={SliderCsr5}
+          width={400}
+          height={400}
+          alt="Slider 5"
+          loading="lazy"
+        />
       </SwiperSlide>
       <SwiperSlide>
-        <Image src={SliderCsr6} width={400} height={400} alt="Slider 6" />
+        <Image
+          src={SliderCsr6}
+          width={400}
+          height={400}
+          alt="Slider 6"
+          loading="lazy"
+        />
       </SwiperSlide>
     </Swiper>
   );

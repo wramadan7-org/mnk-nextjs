@@ -5,6 +5,13 @@ import TitleComponent from "@/components/TitleComponent";
 import AccordionComponent from "@/components/AccordionComponent";
 import { dataAboutUs } from "@/libs/dataAboutUs";
 import SwiperCsrComponent from "@/components/SwiperCsrComponent";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "MNK - CSR",
+  description:
+    "MNK, which has its operation in Cikampek, periodically undertakes numerous social activities, aimed at assisting local communities.",
+};
 
 export default function Csr() {
   return (
@@ -68,7 +75,13 @@ export default function Csr() {
           </div>
 
           <div className="flex flex-[1_1_50%] justify-center">
-            <Image src={Crain} width={450} height={450} alt="Crain" />
+            <Image
+              src={Crain}
+              width={450}
+              height={450}
+              alt="Crain"
+              loading="lazy"
+            />
           </div>
         </div>
       </section>
