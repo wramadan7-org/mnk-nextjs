@@ -15,7 +15,7 @@ export default function NavbarComponent() {
   const { handleClickMenu } = useMenuActions();
 
   return (
-    <nav className="flex sticky top-0 items-center justify-between py-4 px-4 sm:px-7 lg:px-10 bg-primary z-50">
+    <nav className="flex sticky top-0 items-center justify-between py-4 px-4 sm:px-7 lg:px-10 bg-primary z-50 text-white">
       <Link
         href="/"
         onClick={() => handleClickMenu("home")}
