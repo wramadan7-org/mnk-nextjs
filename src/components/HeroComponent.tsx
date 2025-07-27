@@ -7,6 +7,7 @@ import "swiper/css/pagination";
 import HomeHero1 from "@/assets/images/home-hero-1.jpg";
 import HomeHero2 from "@/assets/images//home-hero-2.jpg";
 import HomeHero3 from "@/assets/images//home-hero-3.jpg";
+import Image from "next/image";
 
 const slides = [HomeHero1, HomeHero2, HomeHero3];
 
@@ -31,16 +32,22 @@ export default function HeroComponent() {
           disableOnInteraction: false,
         }}
         className="w-full h-full"
+        lazyPreloadPrevNext={1}
+        lazyPreloaderClass="swiper-lazy-preloader"
       >
         {slides.map((slide, index) => (
           <SwiperSlide key={index}>
-            <div
-              className="w-full h-full bg-cover bg-center"
-              style={{
-                backgroundImage: `url(${slide.src})`,
-              }}
-            >
-              <div className="w-full h-full bg-black/50 flex items-center justify-center md:justify-start px-4 md:px-20">
+            <div className="w-full h-full bg-cover bg-center relative">
+              <Image
+                src={slide.src}
+                alt={`Slide-${index}`}
+                className="absolute inset-0 w-full h-full object-cover z-0"
+                fill
+                priority={index === 0}
+                sizes="100vw"
+              />
+
+              <div className="w-full h-full bg-black/50 flex items-center justify-center md:justify-start px-4 md:px-20 z-20 absolute">
                 <div className="text-white max-w-lg text-center md:text-left">
                   <p className="text-secondary text-xs sm:text-sm uppercase font-semibold">
                     PT. Multi Nitroma Kimia

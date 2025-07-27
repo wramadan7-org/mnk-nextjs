@@ -24,6 +24,7 @@ export default function ButtonComponent({
       className={className ? `${defaultClassName} ${className}` : className}
     >
       {text}
+      <span className="sr-only"> about our program</span>
     </Link>
   );
 }

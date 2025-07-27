@@ -17,6 +17,13 @@ import ButtonComponent from "@/components/ButtonComponent";
 import CardNewsComponent from "@/components/CardNewsComponent";
 import AccordionComponent from "@/components/AccordionComponent";
 import { dataHome } from "@/libs/dataHome";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "MNK",
+  description:
+    "PT. Multi Nitrotama Kimia (MNK) is Indonesia’s leading provider of mining explosives and blasting services. MNK has over 20 years of proven track record in producing Ammonium Nitrate (AN) and has recently expanded its production capacity to 150,000 tons per annum. MNK is committed to providing reliable quality delivery and service with continuous focus on safety, people development and upholding of MNK values.",
+};
 
 export default function Home() {
   return (
