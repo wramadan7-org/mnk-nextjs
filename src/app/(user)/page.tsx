@@ -159,6 +159,7 @@ export default function Home() {
                 index !== 4 ? "lg:border-r-2 border-gray-300" : ""
               }`}
               alt="Product"
+              loading="lazy"
             />
           ))}
         </div>
