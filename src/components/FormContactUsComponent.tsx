@@ -80,7 +80,7 @@ export default function FormContactUsComponent() {
         </Grid>
 
         <Grid size={12}>
-          <Button type="submit" variant="contained" color="primary">
+          <Button type="submit" variant="contained" color="secondary">
             Submit
           </Button>
         </Grid>
