@@ -14,7 +14,7 @@ import NEWS2 from "@/assets/images/news-2.jpg";
 import NEWS3 from "@/assets/images/news-3.jpg";
 import Image from "next/image";
 import ButtonComponent from "@/components/ButtonComponent";
-import CardNewsComponent from "@/components/CardNewsComponent";
+import CardWorkComponent from "@/components/CardWorkComponent";
 import AccordionComponent from "@/components/AccordionComponent";
 import { dataHome } from "@/libs/dataHome";
 import { Metadata } from "next";
@@ -179,7 +179,7 @@ export default function Home() {
         <TitleComponent title="Latest News & Event" isCentered />
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
-          <CardNewsComponent
+          <CardWorkComponent
             title={`CSR Inspiratif: PT MNK Gelar Nobar Film “Jumbo” Bersama 375 Siswa/i di
           CGV Cikampek, Jawa Barat`}
             image={NEWS1}
@@ -188,7 +188,7 @@ export default function Home() {
             createdBy="Admin"
           />
 
-          <CardNewsComponent
+          <CardWorkComponent
             title={`Ramadhan Berbagi: PT Multi Nitrotama Kimia Salurkan Sembako untuk para Jompo & Dhuafa di Wilayah Muara Kembang, Kutai Kartanegara.`}
             image={NEWS2}
             dateNews="2024-05-20T18:00:00Z"
@@ -196,7 +196,7 @@ export default function Home() {
             createdBy="Admin"
           />
 
-          <CardNewsComponent
+          <CardWorkComponent
             title={`PT Multi Nitrotama Kimia berbagi paket sembako ke 200 warga di wilayah Dawuan Tengah, Cikampek`}
             image={NEWS3}
             dateNews="2024-05-20T18:00:00Z"
